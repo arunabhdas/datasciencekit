@@ -15,7 +15,7 @@ docker pull python:3.5
 Status: Downloaded newer image for python:3.5
 docker.io/library/python:3.5
 
-
+Run in interactive mode (remove when done)
 ==> docker run -it python:3.5 bash
 
 List all docker containers
@@ -29,18 +29,22 @@ docker ps --filter "status=exited"
 
 List running docker containers
 docker ps
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-
-
-
-
+CONTAINER ID   IMAGE        COMMAND   CREATED          STATUS          PORTS     NAMES
+2b5bf203cf02   python:3.5   "bash"    16 minutes ago   Up 16 minutes             relaxed_cray
 ~~~
 
+## Create container from scratch
+
+~~~
+docker pull ubuntu
+
+docker run --rm -it ubuntu /bin/bash
+~~~
 
 ## Build images
 
 ~~~
-DOCKER_BUILDKIT=1 docker build .
+docker run --rm -it 
 ~~~
 
 
