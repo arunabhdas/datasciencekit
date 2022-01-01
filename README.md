@@ -162,6 +162,22 @@ python                                     3.5       ca5c413738f0   15 months ag
 ==> docker push arunabhdas/netpost-stack-1
 ~~~
 
+
+## Run the flask and redis container as follows
+
+~~~
+==> cd docker_compose_images/web-stack-1
+
+==> docker-compose up
+~~~
+
+## Stop as follows
+
+~~~
+docker-compose stop
+
+docker-compose down --volumes
+~~~
 ## Links
 
 https://docs.docker.com/language/python/build-images/
