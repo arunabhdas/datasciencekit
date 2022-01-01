@@ -12,5 +12,5 @@ RUN npm install
 
 COPY . /code
 
-CMD ["nodemon", "src/app.ts"]
+CMD ["node", "src/app.ts"]
 
