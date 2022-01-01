@@ -83,6 +83,24 @@ node                                       16.7.0    1c303479e76c   4 months ago
 python                                     3.5       ca5c413738f0   15 months ago    817MB
 ~~~
 
+## View list of all containers on local machine
+
+~~~
+==> docker ps -a
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED             STATUS                           PORTS     NAMES
+fc9fddac359c   netpost-node-express-typescript-postgres   "docker-entrypoint.s…"   About an hour ago   Exited (0) About an hour ago               goofy_curie
+da168d362b96   e41e04fb2547                               "docker-entrypoint.s…"   About an hour ago   Exited (1) About an hour ago               pensive_leakey
+6225c40001f5   f40cd55ea90e                               "docker-entrypoint.s…"   About an hour ago   Exited (1) About an hour ago               ecstatic_shamir
+28c75cf1fbda   2779a09ce422                               "docker-entrypoint.s…"   About an hour ago   Exited (1) About an hour ago               serene_hertz
+01c48c63f27e   3e27c5765d15                               "docker-entrypoint.s…"   About an hour ago   Exited (126) About an hour ago             fervent_keller
+2ae64338c177   67184ada384d                               "docker-entrypoint.s…"   About an hour ago   Exited (1) About an hour ago               determined_wing
+7252ab911589   d938bd972941                               "docker-entrypoint.s…"   About an hour ago   Exited (1) About an hour ago               priceless_curie
+c692cfbc5abd   2779a09ce422                               "docker-entrypoint.s…"   About an hour ago   Exited (1) About an hour ago               pedantic_nightingale
+de0e387bf68c   ubuntu                                     "bash"                   2 hours ago         Exited (0) 2 hours ago                     pedantic_aryabhata
+2b5bf203cf02   python:3.5                                 "bash"                   3 hours ago         Exited (0) 2 hours ago                     relaxed_cray
+9a8679f0c62f   python:3.5                                 "python3"                3 hours ago         Exited (0) 3 hours ago                     jolly_haslett
+~~~
+
 
 ## Run local image
 ~~~
