@@ -55,7 +55,7 @@ CMD ["node", "src/app.ts"]
 
 ~~~
 
-Run
+## Build the docker image
 ~~~
 
 ==> docker help build
@@ -66,8 +66,14 @@ Usage:  docker build [OPTIONS] PATH | URL | -
 ~~~
 
 
+## Run the docker image 
 ~~~
-==> docker build --tag netpost-node-express-typescript-postgres .
+==> docker run netpost-node-express-typescript-postgres
+~~~
+
+## Run detached
+~~~
+==> docker run -p 8080:80 --name hello-netpost-node-express-typescript-postgres -d netpost-node-express-typescript-postgres
 ~~~
 
 ## View list of images on local machine
@@ -109,6 +115,15 @@ de0e387bf68c   ubuntu                                     "bash"                
 Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 ==> docker run netpost-node-express-typescript-postgres 
+~~~
+
+## Run local image in foreground
+~~~
+==> docker run -it netpost-node-express-typescript-postgres /bin/bash
+
+==> docker ps
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS          PORTS     NAMES
+0adf1262443f   netpost-node-express-typescript-postgres   "docker-entrypoint.s…"   17 seconds ago   Up 15 seconds             youthful_kowalevski
 ~~~
 
 ## Links
