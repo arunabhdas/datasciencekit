@@ -90,10 +90,17 @@ Usage:  docker build [OPTIONS] PATH | URL | -
 Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
 ~~~
 
-## Build images
+## View list of images on local machine
 
 ~~~
-docker run --rm -it 
+==> docker images
+REPOSITORY                                 TAG       IMAGE ID       CREATED          SIZE
+netpost-node-express-typescript-postgres   latest    2779a09ce422   2 minutes ago    954MB
+<none>                                     <none>    b47d194b05a7   12 minutes ago   954MB
+python                                     latest    07de2f474278   10 days ago      864MB
+ubuntu                                     latest    d5ca7a445605   2 months ago     65.6MB
+node                                       16.7.0    1c303479e76c   4 months ago     853MB
+python                                     3.5       ca5c413738f0   15 months ago    817MB
 ~~~
 
 
