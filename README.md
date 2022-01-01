@@ -248,3 +248,5 @@ genius_database=# SELECT * FROM countries;
 ## Links
 
 https://docs.docker.com/language/python/build-images/
+
+https://zhao-li.medium.com/getting-started-with-postgresql-using-docker-compose-34d6b808c47c
