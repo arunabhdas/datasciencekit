@@ -63,6 +63,9 @@ CMD ["node", "src/app.ts"]
 Usage:  docker build [OPTIONS] PATH | URL | -
 
 ==> docker build --tag netpost-node-express-typescript-postgres .
+
+==> docker build --tag arunabhdas/netpost-stack-1 .
+
 ~~~
 
 
@@ -124,6 +127,39 @@ Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 ==> docker ps
 CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS          PORTS     NAMES
 0adf1262443f   netpost-node-express-typescript-postgres   "docker-entrypoint.s…"   17 seconds ago   Up 15 seconds             youthful_kowalevski
+~~~
+
+
+## Tagging for publish
+~~~
+
+==> docker build --tag arunabhdas/netpost-stack-1 .
+
+~~~
+
+## Run docker images
+~~~
+==> docker images
+REPOSITORY                                 TAG       IMAGE ID       CREATED         SIZE
+arunabhdas/netpost-stack-1                 latest    4278329aa75d   3 hours ago     954MB
+netpost-node-express-typescript-postgres   latest    4278329aa75d   3 hours ago     954MB
+<none>                                     <none>    e41e04fb2547   4 hours ago     954MB
+<none>                                     <none>    f40cd55ea90e   4 hours ago     954MB
+<none>                                     <none>    3e27c5765d15   4 hours ago     954MB
+<none>                                     <none>    67184ada384d   4 hours ago     954MB
+<none>                                     <none>    d938bd972941   4 hours ago     954MB
+<none>                                     <none>    2779a09ce422   4 hours ago     954MB
+<none>                                     <none>    b47d194b05a7   4 hours ago     954MB
+python                                     latest    07de2f474278   10 days ago     864MB
+ubuntu                                     latest    d5ca7a445605   2 months ago    65.6MB
+node                                       16.7.0    1c303479e76c   4 months ago    853MB
+python                                     3.5       ca5c413738f0   15 months ago   817MB
+~~~
+
+## Push docker image
+
+~~~
+==> docker push arunabhdas/netpost-stack-1
 ~~~
 
 ## Links
