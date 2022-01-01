@@ -189,6 +189,62 @@ docker-compose stop
 
 docker-compose down --volumes
 ~~~
+
+## Run the web-stack-2 container as follows
+
+~~~
+==> cd docker_compose_images/web-stack-2
+
+==> docker-compose up 
+
+
+==> docker-compose run db bash
+root@7545d34198c5:/# psql --host=web-stack-2_db_1 --username=genius_user --dbname=genius_database
+Password for user genius_user: 
+psql (14.1 (Debian 14.1-1.pgdg110+1))
+Type "help" for help.
+
+genius_database=# 
+
+==> docker-compose run db bash
+root@7545d34198c5:/# psql --host=web-stack-2_db_1 --username=genius_user --dbname=genius_database
+Password for user genius_user: 
+psql (14.1 (Debian 14.1-1.pgdg110+1))
+Type "help" for help.
+
+genius_database=# \d
+Did not find any relations.
+genius_database=# CREATE TABLE countries(name TEXT);
+CREATE TABLE
+genius_database=# \d
+            List of relations
+ Schema |   Name    | Type  |    Owner    
+--------+-----------+-------+-------------
+ public | countries | table | genius_user
+(1 row)
+
+genius_database=# SELECT * FROM countries;
+ name 
+------
+(0 rows)
+
+genius_database=# INSERT INTO countries VALUES ('USA');
+INSERT 0 1
+genius_database=# SELECT * FROM countries;
+ name 
+------
+ USA
+(1 row)
+
+genius_database=# INSERT INTO countries VALUES ('UK');
+INSERT 0 1
+genius_database=# SELECT * FROM countries;
+ name 
+------
+ USA
+ UK
+(2 rows)
+~~~
 ## Links
 
 https://docs.docker.com/language/python/build-images/

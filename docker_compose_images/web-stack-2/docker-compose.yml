@@ -7,15 +7,11 @@ services:
       - "8080:80"
   db:
     platform: linux/x86_64
-    image: mongo:3.6.1
-    container_name: db
+    image: "postgres"
+    env_file:
+      - database.env
     volumes:
-      - mongodb:/data/db
-      - mongodb_config:/data/configdb
-    ports: 
-      - 27017:27017
-    command: mongod
+      - database-data:/var/lib/postgresql/data
 
 volumes:
-  mongodb:
-  mongodb_config:
+  database-data:
